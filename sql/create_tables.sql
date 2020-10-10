@@ -5,9 +5,9 @@ CREATE TABLE `users` (
 	`login` VARCHAR(255) NOT NULL UNIQUE,
 	`password` CHAR(32) NOT NULL,
 	/*
-	 * 0 - администратор (Role.ADMINISTRATOR)
-	 * 1 - архтивариус (Role.REGISTRAR)
-	 * 2 - библиотекарь (Role.LIBRARIAN)
+	 * 0 - администратор (domain.Role.ADMINISTRATOR)
+	 * 1 - архтивариус (domain.Role.REGISTRAR)
+	 * 2 - библиотекарь (domain.Role.LIBRARIAN)
 	 */
 	`role` TINYINT NOT NULL CHECK (`role` IN (0, 1, 2)),
 	PRIMARY KEY (`identity`)
