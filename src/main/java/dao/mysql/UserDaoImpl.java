@@ -7,7 +7,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import dao.UserDao;
 import domain.Role;
@@ -15,7 +17,7 @@ import domain.User;
 import exception.PersistentException;
 
 public class UserDaoImpl extends BaseDaoImpl implements UserDao {
-	private static Logger logger = Logger.getLogger(UserDaoImpl.class);
+	private static Logger logger = LogManager.getLogger(UserDaoImpl.class);
 
 	@Override
 	public Integer create(User user) throws PersistentException {

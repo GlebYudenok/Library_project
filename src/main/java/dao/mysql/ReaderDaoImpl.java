@@ -7,14 +7,16 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import dao.ReaderDao;
 import domain.Reader;
 import exception.PersistentException;
 
 public class ReaderDaoImpl extends BaseDaoImpl implements ReaderDao {
-	private static Logger logger = Logger.getLogger(ReaderDaoImpl.class);
+	private static Logger logger = LogManager.getLogger(ReaderDaoImpl.class);
 
 	@Override
 	public Integer create(Reader reader) throws PersistentException {

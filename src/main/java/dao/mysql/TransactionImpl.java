@@ -5,7 +5,8 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import dao.AuthorDao;
 import dao.BookDao;
@@ -17,7 +18,7 @@ import dao.UserDao;
 import exception.PersistentException;
 
 public class TransactionImpl implements Transaction {
-	private static Logger logger = Logger.getLogger(TransactionImpl.class);
+	private static Logger logger = LogManager.getLogger(TransactionImpl.class);
 
 	private static Map<Class<? extends Dao<?>>, Class<? extends BaseDaoImpl>> classes = new ConcurrentHashMap<>();
 	static {

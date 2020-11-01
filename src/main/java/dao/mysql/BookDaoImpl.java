@@ -8,7 +8,9 @@ import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import dao.BookDao;
 import domain.Author;
@@ -16,7 +18,7 @@ import domain.Book;
 import exception.PersistentException;
 
 public class BookDaoImpl extends BaseDaoImpl implements BookDao {
-	private static Logger logger = Logger.getLogger(BookDaoImpl.class);
+	private static Logger logger = LogManager.getLogger(BookDaoImpl.class);
 
 	@Override
 	public Integer create(Book book) throws PersistentException {

@@ -8,9 +8,8 @@ import java.sql.Statement;
 import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.log4j.Logger;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import dao.UsageDao;
 import domain.Book;
 import domain.Reader;
@@ -18,7 +17,7 @@ import domain.Usage;
 import exception.PersistentException;
 
 public class UsageDaoImpl extends BaseDaoImpl implements UsageDao {
-	private static Logger logger = Logger.getLogger(UsageDaoImpl.class);
+	private static Logger logger = LogManager.getLogger(UsageDaoImpl.class);
 
 	@Override
 	public Integer create(Usage usage) throws PersistentException {

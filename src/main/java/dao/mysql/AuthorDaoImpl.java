@@ -10,14 +10,15 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import dao.AuthorDao;
 import domain.Author;
 import exception.PersistentException;
 
 public class AuthorDaoImpl extends BaseDaoImpl implements AuthorDao {
-	private static Logger logger = Logger.getLogger(AuthorDaoImpl.class);
+	private static Logger logger = LogManager.getLogger(AuthorDaoImpl.class);
 
 	@Override
 	public Integer create(Author author) throws PersistentException {
